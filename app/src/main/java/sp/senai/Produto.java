@@ -1,6 +1,8 @@
 package sp.senai;
 
-public class Produto {
+import java.io.Serializable;
+
+public class Produto implements Serializable {
 
     private int id;
     private String nome;
@@ -18,14 +20,17 @@ public class Produto {
     }
 
     public int getId() {
+
         return id;
     }
 
     public void setId(int id) {
+
         this.id = id;
     }
 
     public String getNome() {
+
         return nome;
     }
 
@@ -59,11 +64,18 @@ public class Produto {
         return preco;
     }
 
-    public void setPreco(double preco) {
-        this.preco = preco;
+    public boolean setPreco(double preco) {
+        if (preco >= 0){
+            this.preco = preco;
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     public String toString(){
+
         return nome;
     }
 

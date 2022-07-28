@@ -2,7 +2,7 @@ package sp.senai;
 
 import junit.framework.TestCase;
 
-public class ProdutoTest extends TestCase {
+public class ProdutoTest  extends TestCase {
 
     public void testSetNome(){
         Produto p = new Produto();
@@ -12,7 +12,7 @@ public class ProdutoTest extends TestCase {
 
     public void testSetQuantidade(){
         Produto p = new Produto();
-        boolean resultado = p.setQuantidade(-1);
+        boolean resultado = p.setQuantidade(1);
         assertEquals(true,resultado);
     }
 
