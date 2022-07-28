@@ -29,16 +29,30 @@ public class Produto {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public boolean setNome(String nome) {
+        if(nome.length() > 1){
+            this.nome = nome;
+            return true;
+        }
+        else{
+            return false;
+        }
+
     }
 
     public int getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
+    public boolean setQuantidade(int quantidade) {
+        if(quantidade >= 0){
+            this.quantidade = quantidade;
+            return true;
+        }
+        else{
+            return false;
+        }
+
     }
 
     public double getPreco() {
